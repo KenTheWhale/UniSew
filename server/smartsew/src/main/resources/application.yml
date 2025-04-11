@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: smartsew
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres.jbnumhdeinrfxvwhofzc
+    password: SmartSewSU_2025
+    url: jdbc:postgresql://aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres
