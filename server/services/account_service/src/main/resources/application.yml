@@ -1,5 +1,23 @@
 spring:
   application:
     name: account_service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres.jbnumhdeinrfxvwhofzc
+    password: SmartSewSU_2025
+    url: jdbc:postgresql://aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres?user=postgres.jbnumhdeinrfxvwhofzc&password=SmartSewSU_2025
+  cloud:
+    gateway:
+      routes:
+        - id: account_service
+          uri: ${service.uri.account}
+          predicates:
+            - Path=${service.prefix}/account/**
+
 server:
   port: 9999
+
+service:
+  uri:
+    account: http://localhost:9999
+  prefix: /api/v1
