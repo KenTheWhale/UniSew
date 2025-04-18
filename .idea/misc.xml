@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/server/smartsew/pom.xml" />
+        <option value="$PROJECT_DIR$/server/unisew/pom.xml" />
       </list>
     </option>
   </component>
