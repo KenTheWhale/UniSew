@@ -1,18 +1,24 @@
-import {createBrowserRouter, Navigate} from "react-router-dom";
+import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
+import {Login} from "./pages/Login.jsx";
+import {SnackbarProvider} from "notistack";
 
-const route = createBrowserRouter([
+const router = createBrowserRouter([
     {
         path:"/login",
-        element: <h1>Login</h1>
+        element: <Login />
     },
     {
         path: "*",
-        element: <Navigate to={"/login"}/>
+        element: <Login />
     }
 ])
 
 function App() {
-
+    return (
+        <SnackbarProvider maxSnack={4} anchorOrigin={{horizontal: "right", vertical: "top"}} autoHideDuration={3000}>
+            <RouterProvider router={router}/>
+        </SnackbarProvider>
+    )
 }
 
 export default App
